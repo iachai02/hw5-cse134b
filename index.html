@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website of Immanuel Chai">
+    <title>Immanuel Chai - Portfolio</title>
+    <link rel="icon" href="favicon.ico">
+    <script>
+        class HelloWorld extends HTMLElement {
+            connectedCallback() {
+                console.log("Hello World!");
+            }
+        }
+        customElements.define('hello-world', HelloWorld);
+    </script>
+    <style>
+        portfolio-card {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="Chai-Immanuel-Resume.pdf">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Immanuel Chai</h1>
+            <p><em>Web Developer</em> & <strong>Designer</strong></p>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+        <section class="featured-work">
+            <h2>Featured Work</h2>
+            <portfolio-card>
+                <h3>Uni-Rides Project</h3>
+                <p>This project goes into depth on...</p>
+            </portfolio-card>
+            <h3>Want to see more?</h3>
+            <iframe src="projects.html" title="Project Demo" width="600" height="400"></iframe>
+        </section>
+
+        <aside>
+            <h3>Quick Links</h3>
+            <nav>
+                <ul>
+                    <li><a href="contact.html#faq">FAQ</a></li>
+                    <li><a href="https://github.com/iachai02">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/immanuel-chai/">LinkedIn</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="tech-stack">
+            <h2>Technical Skills</h2>
+            <dl>
+                <dt>Frontend</dt>
+                <dd>HTML, CSS, JavaScript, React, React Native, Typescript</dd>
+                <dt>Backend</dt>
+                <dd>Node.js, Python</dd>
+            </dl>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            Contact: <a href="mailto:immanuelchai7@gmail.com">immanuelchai7@gmail.com</a>
+        </address>
+        <p><small>&copy; 2024 Immanuel Chai</small></p>
+    </footer>
+
+    <hello-world></hello-world>
+</body>
+</html>
