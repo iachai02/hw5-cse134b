@@ -32,3 +32,14 @@ nav ul li a {
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, fr));
+    gap: 20px;
+    padding: 20px;
+}
