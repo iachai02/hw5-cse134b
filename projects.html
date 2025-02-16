@@ -23,96 +23,103 @@
         </nav>
     </header>
 
-    <main>
+    <main id="projects">
         <h1>My Projects</h1>
-        <section id="project1">
-            <hgroup>
-                <h2>Uni-Rides</h2>
-                <h3>Phone Application</h3>
-                <figure>
-                    <picture>
-                        <source srcset="" media="(mid-width: 500px)">
-                        <img src="" alt="Uni-Rides screenshot">
-                    </picture>
-                    <figcaption>Screenshot of Uni-Rides Application Interface</figcaption>
-                </figure>
-                <table>
-                    <caption>Project Technologies</caption>
-                    <colgroup>
-                        <col class="tech-name">
-                        <col class="tech-description">
-                    </colgroup>
-                    <tr>
-                        <th>Technology</th>
-                        <th>Purpose</th>
-                    </tr>
-                    <tr>
-                        <td>React Native</td>
-                        <td>Structure</td>
-                    </tr>
-                    <tr>
-                        <td>Typescript</td>
-                        <td>Styling</td>
-                    </tr>
-                </table>
-                <h2>Gym App</h2>
-                <h3>Web Application</h3>
-            </hgroup>
-
-            <div class="project-details">
-                <p>Project descript with <span class="highlight">key features</span></p>
-                <pre><code>
-                    function hello() {
-                        console.log("Hello World");
-                    }
-                </code></pre>
-            </div>
-        </section>
-
-        <section id="project2">
-            <h2>Gym App (random app I found on youtube)</h2>
-            <div class="media-showcase">
-                <video controls>
-                    <source src="videoplayback (1).mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <audio controls>
-                    <source src="videoplayback.mp4" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-            
-            <canvas id="projectGraph" width="200" height="100">
-                Your browser does not support the canvas element.
-            </canvas>
-
-            <svg width="100" height="100">
-                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
-            </svg>
-        </section>
-
-        <section id="project3">
-            <h2>Project 3</h2>
-            <blockquote>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod sunt deserunt eveniet minus perferendis, corrupti quisquam consectetur enim quo rerum adipisci voluptatem nihil animi repellat eligendi? Rem nisi blanditiis fugiat?</p>
-                <cite>- Client Name</cite>
-            </blockquote>
-            <details>
-                <summary>Technical Details</summary>
-                <p>The technical details include...</p>
-            </details>
-
-            <h3>Technologies Used</h3>
-            <form>
-                <label for="tech-input">Search technologies:</label>
-                <input type="text" id="tech-input" list="tech-list">
-                <datalist id="tech-list">
-                    <option value="HTML5">
-                    <option value="JavaScript">
-                    <option value="CSS3">
-                </datalist>"
-            </form>
-        </section>
+        <div class="project-gallery">
+            <section id="project1">
+                <hgroup>
+                    <h2>Uni-Rides</h2>
+                    <h3>Phone Application</h3>
+                    <figure id="project1-gallery">
+                        <picture>
+                            <source srcset="images/project1_p1.webp" type="image/webp" media="(min-width: 500px)">
+                            <img src="images/project1_p1.webp" alt="Uni-Rides onboarding">
+                        </picture>
+                        <figcaption>Screenshot of Uni-Rides Onboarding Screen</figcaption>
+                        <picture>
+                            <source srcset="images/project_p2.png" type="image/png" media="(mid-width: 500px)">
+                            <img src="images/project1_p2.png" alt="Uni-Rides profile picture">
+                        </picture>
+                    </figure>
+                    <table class="tech-table">
+                        <caption id="project-tech">Project Technologies</caption>
+                        <colgroup>
+                            <col class="tech-name">
+                            <col class="tech-description">
+                        </colgroup>
+                        <tr>
+                            <th>Technology</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>React Native</td>
+                            <td>Structure</td>
+                        </tr>
+                        <tr>
+                            <td>Typescript</td>
+                            <td>Styling</td>
+                        </tr>
+                    </table>
+                    <div class="project-details">
+                        <h3>Project Details</h3>
+                        <p>This project involves developing a ride-sharing app for university students with a <span class="highlight">seamless user experience</span>.</p>
+                        <pre><code>
+        function startRide() {
+            console.log("Ride Started!");
+        }
+                        </code></pre>
+                    </div>
+                </section>
+                </hgroup>
+            </section>
+    
+            <section id="project2">
+                <h2>Gym App (random app I found on youtube)</h2>
+                <div class="media-showcase">
+                    <video controls>
+                        <source src="videoplayback (1).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <audio controls>
+                        <source src="videoplayback.mp4" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                
+                <canvas id="projectGraph" width="200" height="100">
+                    Your browser does not support the canvas element.
+                </canvas>
+    
+                <div class="svg-container">
+                    <svg width="100" height="100">
+                        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+                    </svg>
+                </div>
+            </section>
+    
+            <section id="project3">
+                <h2>Project 3</h2>
+                <blockquote>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod sunt deserunt eveniet minus perferendis, corrupti quisquam consectetur enim quo rerum adipisci voluptatem nihil animi repellat eligendi? Rem nisi blanditiis fugiat?</p>
+                    <cite>- Client Name</cite>
+                </blockquote>
+                <details>
+                    <summary>Technical Details</summary>
+                    <p>The technical details include...</p>
+                </details>
+    
+                <h3>Technologies Used</h3>
+                <form>
+                    <label for="tech-input">Search technologies:</label>
+                    <input type="text" id="tech-input" list="tech-list">
+                    <datalist id="tech-list">
+                        <option value="HTML5">
+                        <option value="JavaScript">
+                        <option value="CSS3">
+                    </datalist>"
+                </form>
+            </section>
+        </div>
 
         <template id="project-template">
             <div class="project-card">
