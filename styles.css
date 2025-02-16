@@ -43,3 +43,14 @@ main {
     gap: 20px;
     padding: 20px;
 }
+
+.hero {
+    height: 90dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to right, #2a9d8f, #264653);
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
