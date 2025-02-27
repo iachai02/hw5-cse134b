@@ -319,8 +319,18 @@ video {
 
 .contact-form {
     display: flex;
-    flex-direction: columns;
+    flex-direction: column;
     gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.required {
+    color: red;
+    font-weight: bold;
 }
 
 .contact-form input, .contact-form select, .contact-form textarea {
@@ -338,6 +348,21 @@ video {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.error-message, .info-message {
+    font-size: 0.9rem;
+    padding: 5px;
+    display: block;
+    color: red;
+}
+
+.info-message {
+    color: green;
 }
 
 @media screen and (max-width: 1024px) {
