@@ -30,12 +30,18 @@
                     <legend>Personal Information</legend>
                     <label for="name">Name: <span class="required">*</span></label>
                     <input type="text" id="name" name="name" required aria-label="Name">
+                    <output id="name-error" class="error-message"></output>
+                    <output id="name-info" class="info-message"></output>
 
                     <label for="email">Email: <span class="required">*</span></label>
                     <input type="email" id="email" name="email" required aria-label="Email">
+                    <output id="email-error" class="error-message"></output>
+                    <output id="email-info" class="info-message"></output>
 
                     <label for="phone">Phone:</label>
                     <input type="tel" id="phone" name="phone" aria-label="Phone">
+                    <output id="phone-error" class="error-message"></output>
+                    <output id="phone-info" class="info-message"></output>
                 </fieldset>
 
                 <fieldset>
@@ -50,14 +56,16 @@
                             <option value="general">General Inquiry</option>
                         </optgroup>
                     </select>
+                    <output id="subject-error" class="error-message"></output>
+                    <output id="subject-info" class="info-message"></output>
+
                     <label for="message">Your Message: <span class="required">*</span></label>
                     <textarea id="message" name="message" rows="5" required></textarea>
+                    <output id="subject-error" class="error-message"></output>
+                    <output id="subject-info" class="info-message"></output>
                 </fieldset>
 
                 <input type="hidden" name="possible_bot" value="true">
-
-                <output class="error-message"></output>
-                <output class="info-message"></output>
 
                 <button type="submit">Send Message</button>
             </form>
