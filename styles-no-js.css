@@ -1,0 +1,49 @@
+input:required, textarea:required, select:required {
+    border: 2px solid lightgray;
+}
+
+input:valid, textarea:valid, select:valid {
+    border-color: green;
+    background-color: #e0ffe0;
+}
+
+input:invalid, textarea:invalid, select:invalid {
+    border-color: red;
+    background-color: #ffe0e0;
+}
+
+input:placeholder-shown, textarea:placeholder-shown {
+    border-color: lightgray;
+}
+
+input:focus:invalid, textarea:focus:invalid {
+    outline: none;
+    border-color: red;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    visibility: hidden;
+}
+
+.info-message {
+    color: green;
+    font-size: 0.9rem;
+    visibility: hidden;
+}
+
+input:invalid + .error-message,
+textarea:invalid + .error-message,
+select:invalid + .error-message {
+    visibility: visible;
+    content: "Please fill out this field correctly.";
+}
+
+input:valid + .info-message,
+textarea:valid + .info-message,
+select:valid + .info-message {
+    visibility: visible;
+    content: "Looks good!";
+}
