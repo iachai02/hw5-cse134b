@@ -11,7 +11,15 @@ class ProjectCard extends HTMLElement {
 
         const picture = document.createElement('picture');
         const img = document.createElement('img');
-        img.src = this.getAttribute('image') || 'default.jpg';
+
+        const imageSrc = this.getAttribute('image');
+        if (imageSrc && imageSrc.trim() !== '') {
+            img.src = imageSrc;
+        }
+        else {
+            img.src = 'images/default.jpg';
+        }
+
         img.alt = this.getAttribute('alt') || 'Project Image';
         picture.appendChild(img);
 
@@ -48,6 +56,17 @@ class ProjectCard extends HTMLElement {
         
         shadow.appendChild(style);
         shadow.appendChild(card);
+    }
+
+    static get observedAttributes() {
+        return ['image'];
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (name === 'image' && this.shadowRoot) {
+            const img = this.shadowRoot.querySelector('img');
+            if (img) img.src = newValue && newValue.trim() !== '' ? newValue : 'images/default.jpg';
+        }
     }
 }
 
