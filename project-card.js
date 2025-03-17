@@ -34,28 +34,6 @@ class ProjectCard extends HTMLElement {
         card.appendChild(picture);
         card.appendChild(description);
         card.appendChild(link);
-
-        /*const style = document.createElement('style');
-        style.textContent = `
-            .project-card {
-                border: 1px solid #ddd;
-                padding: 15px;
-                border-radius: 8px;
-                max-width: 300px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s;
-            }
-            .project-card:hover {
-                transform: translateY(-5px);
-            }
-            img {
-                max-width: 100%;
-                border-radius: 5px;
-            }
-        `;
-        
-        shadow.appendChild(style);
-        shadow.appendChild(card);*/
     }
 
     static get observedAttributes() {

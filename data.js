@@ -6,10 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const LOCAL_STORAGE_KEY = 'projectsData';
     const REMOTE_URL = 'https://api.jsonbin.io/v3/b/67d7b6128960c979a573113d';
 
-    console.log('Buttons loaded successfully!');
-
     function displayProjects(projects) {
-        console.log('Displaying projects:',projects);
+
 
         if (!projects || projects.length === 0) {
             console.error('No project data found!');
