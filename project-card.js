@@ -35,7 +35,7 @@ class ProjectCard extends HTMLElement {
         card.appendChild(description);
         card.appendChild(link);
 
-        const style = document.createElement('style');
+        /*const style = document.createElement('style');
         style.textContent = `
             .project-card {
                 border: 1px solid #ddd;
@@ -55,18 +55,43 @@ class ProjectCard extends HTMLElement {
         `;
         
         shadow.appendChild(style);
-        shadow.appendChild(card);
+        shadow.appendChild(card);*/
     }
 
     static get observedAttributes() {
-        return ['image'];
+        return ['title', 'image', 'alt', 'description', 'link'];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        if (name === 'image' && this.shadowRoot) {
-            const img = this.shadowRoot.querySelector('img');
-            if (img) img.src = newValue && newValue.trim() !== '' ? newValue : 'images/default.jpg';
-        }
+        this.render();
+    }
+
+    render() {
+        this.shadowRoot.innerHTML = `
+            <style>
+                .project-card {
+                    border: 1px solid #ddd;
+                    padding: 15px;
+                    border-radius: 8px;
+                    max-width: 300px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s;
+                }
+                .project-card:hover {
+                    transform: translateY(-5px);
+                }
+                img {
+                    max-width: 100%;
+                    border-radius: 5px;
+                }
+            </style>
+            <div class="project-card">
+                <h2>${this.getAttribute('title') || 'Project Title'}</h2>
+                <img src="${this.getAttribute('image') || 'images/default.jpg'}" alt="${this.getAttribute('alt') || 'Project Image'}">
+                <p>${this.getAttribute('description') || 'Short description of the project.'}</p>
+                <a href="${this.getAttribute('link') || '#'}" target="_blank">Learn More</a>
+            </div>
+        `;
     }
 }
 
